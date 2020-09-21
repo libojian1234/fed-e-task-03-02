@@ -22,7 +22,7 @@
 
 然后触发了生命周期的钩子函数`mounted`,挂载结束，最终返回`Vue`实例。
 
-![./images/Vue首次渲染过程.png](https://gitee.com/jiailing/lagou-fed/raw/master/fed-e-task-03-02/images/Vue%E9%A6%96%E6%AC%A1%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B.png)
+![./images/Vue首次渲染过程.png]([https://github.com/libojian1234/fed-e-task-03-02/blob/master/images/Vue%E9%A6%96%E6%AC%A1%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B.png](https://github.com/libojian1234/fed-e-task-03-02/blob/master/images/Vue首次渲染过程.png))
 
 ### 2、请简述 Vue 响应式原理。
 
@@ -48,7 +48,7 @@ defineReactive`会为每一个属性创建`dep`对象，让`dep`去收集依赖�
 
 触发`updated`钩子函数
 
-![./images/Vue响应式原理.png](https://gitee.com/jiailing/lagou-fed/raw/master/fed-e-task-03-02/images/Vue%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86.png)
+![./images/Vue响应式原理.png]([https://github.com/libojian1234/fed-e-task-03-02/blob/master/images/Vue%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86.png](https://github.com/libojian1234/fed-e-task-03-02/blob/master/images/Vue响应式原理.png))
 
 ### 3、请简述虚拟 DOM 中 Key 的作用和好处。
 
@@ -61,3 +61,5 @@ defineReactive`会为每一个属性创建`dep`对象，让`dep`去收集依赖�
 把模板合并好的选项传递给`baseCompile`，`baseCompile`里面完成了模板编译核心的三件事，首先调用`parse`函数把模板转换成`AST`抽象语法树，然后调用`optimize`函数对抽象语法树进行优化，标记静态语法树中的静态根节点（只包含纯文本的静态节点不是静态根节点，因为此时的优化成本大于收益），patch过程中会跳过静态根节点，最后调用`generate`函数，将`AST`对象转化为`js`形式的代码。
 
 当`compile`执行完毕后，会回到编译的入口函数`compileToFunctions`，通过调用`createFunction`函数，继续把上一步中生成的字符串形式`JS`代码转化为函数形式。当`render`和`staticRenderFns`初始化完毕，挂载到Vue实例的`options`对应的属性上。
+
+![./images/Vue 中模板编译的过程.jpeg]([https://github.com/libojian1234/fed-e-task-03-02/blob/master/images/Vue%20%E4%B8%AD%E6%A8%A1%E6%9D%BF%E7%BC%96%E8%AF%91%E7%9A%84%E8%BF%87%E7%A8%8B.jpeg](https://github.com/libojian1234/fed-e-task-03-02/blob/master/images/Vue 中模板编译的过程.jpeg))
